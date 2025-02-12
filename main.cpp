@@ -8,6 +8,7 @@ void showProgress(int attemptsLeft, string guessedWord) {
     cout << "Current word state: " << guessedWord << endl;
 }
 
+
 bool checkLetter(char guess, string word, string &guessedWord) {
     bool found = false;
     for (size_t i = 0; i < word.length(); i++) {
@@ -20,9 +21,9 @@ bool checkLetter(char guess, string word, string &guessedWord) {
 }
 
 int main() {
-    int attempts = 7;  // Numri i tentativave të lejuara
-    string word = "PROGRAM";  // Fjala për t'u gjetur
-    string guessedWord = "_______";  // Forma e fjalës me hapësira
+    int attempts = 7;  
+    string word = "PROGRAM";  
+    string guessedWord = "_______";  
 
     cout << "Welcome to Guess The Word!\n";
 
@@ -33,7 +34,7 @@ int main() {
         cout << "Enter a letter: ";
         cin >> guess;
 
-        guess = toupper(guess);
+        guess = toupper(guess); 
 
         if (checkLetter(guess, word, guessedWord)) {
             cout << "Correct!\n";
@@ -54,3 +55,4 @@ int main() {
 
     return 0;
 }
+
