@@ -3,13 +3,11 @@
 
 using namespace std;
 
-// Funksioni për të shfaqur progresin e lojës
 void showProgress(int attemptsLeft, string guessedWord) {
     cout << "\nAttempts left: " << attemptsLeft << endl;
     cout << "Current word state: " << guessedWord << endl;
 }
 
-// Funksioni për të kontrolluar nëse shkronja ekziston në fjalë
 bool checkLetter(char guess, string word, string &guessedWord) {
     bool found = false;
     for (size_t i = 0; i < word.length(); i++) {
@@ -35,7 +33,7 @@ int main() {
         cout << "Enter a letter: ";
         cin >> guess;
 
-        guess = toupper(guess); // Konverto në uppercase për përputhshmëri
+        guess = toupper(guess);
 
         if (checkLetter(guess, word, guessedWord)) {
             cout << "Correct!\n";
