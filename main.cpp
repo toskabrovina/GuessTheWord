@@ -8,10 +8,22 @@ void showProgress(int attemptsLeft, string guessedWord) {
     cout << "Current word state: " << guessedWord << endl;
 }
 
+
+bool checkLetter(char guess, string word, string &guessedWord) {
+    bool found = false;
+    for (size_t i = 0; i < word.length(); i++) {
+        if (word[i] == guess && guessedWord[i] == '_') {
+            guessedWord[i] = guess;
+            found = true;
+        }
+    }
+    return found;
+}
+
 int main() {
-    int attempts = 7;
-    string word = "PROGRAM";
-    string guessedWord = "_______"; // Fjalë e fshehur
+    int attempts = 7;  
+    string word = "PROGRAM";  
+    string guessedWord = "_______";  
 
     cout << "Welcome to Guess The Word!\n";
 
@@ -22,27 +34,23 @@ int main() {
         cout << "Enter a letter: ";
         cin >> guess;
 
-        bool found = false;
-        for (size_t i = 0; i < word.length(); i++) {
-            if (toupper(word[i]) == toupper(guess)) {
-                guessedWord[i] = word[i];
-                found = true;
-            }
-        }
+        guess = toupper(guess); 
 
-        if (!found) {
+        if (checkLetter(guess, word, guessedWord)) {
+            cout << "Correct!\n";
+        } else {
+            cout << "Wrong guess! Try again.\n";
             attempts--;
-            cout << "Incorrect guess! Try again.\n";
         }
 
         if (guessedWord == word) {
-            cout << "Congratulations! You guessed the word: " << word << endl;
+            cout << "\nCongratulations! You guessed the word: " << word << endl;
             break;
         }
     }
 
     if (attempts == 0) {
-        cout << "Game over! The word was: " << word << endl;
+        cout << "\nGame Over! The word was: " << word << endl;
     }
 
     return 0;
