@@ -20,6 +20,9 @@ bool checkLetter(char guess, string word, string &guessedWord) {
 }
 
 
+
+// Game logic added by Person 4
+
 int main() {
     int attempts = 7;  // Numri i tentativave të lejuara
     string word = "PROGRAM";  // Fjala për t'u gjetur
