@@ -11,6 +11,7 @@ Ky është një lojë me tekst ku përdoruesi duhet të gjejë një fjalë të f
 
 
 
+
 ## 🛠️ Si të kontribuosh?
 1. Krijo një kopje (fork) të këtij projekti në GitHub.
 2. Krijo një branch të ri për ndryshimet e tua.
