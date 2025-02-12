@@ -12,11 +12,17 @@ Ky është një lojë me tekst ku përdoruesi duhet të gjejë një fjalë të f
 
 
 ## 🛠️ Si të kontribuosh?
-1. Bëj fork këtij projekti në GitHub.
+1. Krijo një kopje (fork) të këtij projekti në GitHub.
 2. Krijo një branch të ri për ndryshimet e tua.
 3. Bëj ndryshimet e nevojshme dhe dërgo një **Pull Request** për rishikim.
 
 ## 🚀 Si të ekzekutoni lojën?
 1. Kompilo programin me:
-   ```bash
-   g++ main.cpp -o game
+2. // Kompilimi
+g++ main.cpp -o game
+
+// Ekzekuto lojën
+./game
+g++ main.cpp -o game
+
+
