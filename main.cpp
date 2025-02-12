@@ -3,11 +3,13 @@
 
 using namespace std;
 
+// Funksioni për të shfaqur progresin e lojës
 void showProgress(int attemptsLeft, string guessedWord) {
     cout << "\nAttempts left: " << attemptsLeft << endl;
     cout << "Current word state: " << guessedWord << endl;
 }
 
+// Funksioni për të kontrolluar nëse shkronja ekziston në fjalë
 bool checkLetter(char guess, string word, string &guessedWord) {
     bool found = false;
     for (size_t i = 0; i < word.length(); i++) {
@@ -18,10 +20,6 @@ bool checkLetter(char guess, string word, string &guessedWord) {
     }
     return found;
 }
-
-
-
-// Game logic added by Person 4
 
 int main() {
     int attempts = 7;  // Numri i tentativave të lejuara
@@ -36,6 +34,7 @@ int main() {
         char guess;
         cout << "Enter a letter: ";
         cin >> guess;
+
         guess = toupper(guess); // Konverto në uppercase për përputhshmëri
 
         if (checkLetter(guess, word, guessedWord)) {
@@ -45,13 +44,11 @@ int main() {
             attempts--;
         }
 
-                if (guessedWord == word) {
+        if (guessedWord == word) {
             cout << "\nCongratulations! You guessed the word: " << word << endl;
             break;
         }
     }
-
-
 
     if (attempts == 0) {
         cout << "\nGame Over! The word was: " << word << endl;
