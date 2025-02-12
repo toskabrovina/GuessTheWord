@@ -18,6 +18,11 @@ Ky është një lojë me tekst ku përdoruesi duhet të gjejë një fjalë të f
 3. Bëj ndryshimet e nevojshme dhe dërgo një **Pull Request** për rishikim.
 
 ## 🚀 Si të ekzekutoni lojën?
-g++ main.cpp -o game
+1. Kompilo programin me:
+   ```bash
+   g++ main.cpp -o game
+
+---
+
 
 
